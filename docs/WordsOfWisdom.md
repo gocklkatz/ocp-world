@@ -1,0 +1,1 @@
+- You cannot have more than one public top-level reference type in a file!
