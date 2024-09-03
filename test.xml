@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sk:root xmlns:sk="io.gocklkatz.sk" xmlns:fl="io.gocklkatz.fl">
+  <sk:elem1>blah</sk:elem1>
+  <fl:elem1>blup</fl:elem1>
+</sk>
