@@ -13,5 +13,11 @@ public class MyXML {
         for(String s : strings) {
             System.out.println(s);
         }
+
+        // Load test.xml with DOM parser
+
+        // Load test.xml with SAX parser
+
+        // Get <fl:elem1> from test.xml
     }
 }
