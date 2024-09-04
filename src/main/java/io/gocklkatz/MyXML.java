@@ -1,5 +1,6 @@
 package io.gocklkatz;
 
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -22,12 +23,13 @@ public class MyXML {
 
         // Load test.xml with DOM parser
         // https://www.baeldung.com/java-xerces-dom-parsing
-        DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-        Document doc = builder.parse(Files.newInputStream(path));
-        doc.getDocumentElement().normalize();
-
-        NodeList nodeList = doc.getElementsByTagName("sk:root");
-        System.out.println("Nodelist length: " + nodeList.getLength());
+        // https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        try (InputStream in = Files.newInputStream(path)) {
+            Document doc = builder.parse(in);
+            System.out.println(doc.getFirstChild().getTextContent());
+        }
 
         // Load test.xml with SAX parser
 
