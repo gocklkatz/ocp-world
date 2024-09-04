@@ -13,6 +13,8 @@
 - URL, URI, URN: https://auth0.com/blog/url-uri-urn-differences/
 - XML-Applications
 
-...
-
-- Java Architecture for XML Binding (JAXB)
+Java APIs for XML
+- DOM API: W3C-DOM
+- Pull-API: XPP (XML Pull Parser) following StAX-Standard
+- Push-API: SAX (Simple API for XML)
+- Mapping-API: JAXB (Java Architecture for XML Binding)
