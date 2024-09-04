@@ -10,7 +10,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
 
 public class MyXML {
     
@@ -24,6 +23,7 @@ public class MyXML {
         // Load test.xml with DOM parser
         // https://www.baeldung.com/java-xerces-dom-parsing
         // https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html
+        // https://www.oracle.com/java/technologies/jaxp-introduction.html
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         try (InputStream in = Files.newInputStream(path)) {
