@@ -30,3 +30,4 @@ Java APIs for XML
 - Java Architecture for ML Binding (JAXB), https://en.wikipedia.org/wiki/Jakarta_XML_Binding
 - Streaming API for XML (StAX), https://en.wikipedia.org/wiki/StAX
 - Jakarta EE, https://www.baeldung.com/java-enterprise-evolution
+- JAX-RS, https://en.wikipedia.org/wiki/Jakarta_RESTful_Web_Services
