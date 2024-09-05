@@ -25,3 +25,6 @@ Java APIs for XML
     XSLT with XSLTC (Compiling XSLT Processor)
 - JAXP abstraction for XML 1.0/1.1, DOM Level3, W3C XML Schema 1.0, XSLT 1.0, XInclude 1.0,
   XPath 1.0, SAX 2.0.2, StAX 1.2
+- https://en.wikipedia.org/wiki/Java_API_for_XML_Processing
+- __
+- Java Architecture for ML Binding (JAXB), https://en.wikipedia.org/wiki/Jakarta_XML_Binding
