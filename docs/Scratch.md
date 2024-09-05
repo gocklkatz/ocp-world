@@ -28,3 +28,4 @@ Java APIs for XML
 - https://en.wikipedia.org/wiki/Java_API_for_XML_Processing
 - __
 - Java Architecture for ML Binding (JAXB), https://en.wikipedia.org/wiki/Jakarta_XML_Binding
+- Streaming API for XML (StAX), https://en.wikipedia.org/wiki/StAX
