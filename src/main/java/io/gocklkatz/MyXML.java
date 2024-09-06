@@ -1,11 +1,14 @@
 package io.gocklkatz;
 
 import java.io.InputStream;
+import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamReader;
 
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
@@ -20,7 +23,6 @@ public class MyXML {
         //    System.out.println(s);
         //}
 
-        // Load test.xml with DOM parser
         // https://www.baeldung.com/java-xerces-dom-parsing
         // https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html
         // https://www.oracle.com/java/technologies/jaxp-introduction.html
@@ -31,9 +33,11 @@ public class MyXML {
             System.out.println(doc.getFirstChild().getTextContent());
         }
 
-        // Load test.xml with SAX parser
+        // SAX
 
-        // Get <fl:elem1> from test.xml
+        // StAX
+        XMLInputFactory factory1 = XMLInputFactory.newInstance();
+        XMLStreamReader parser = factory1.createXMLStreamReader((Reader) null);
 
         // ---
 
