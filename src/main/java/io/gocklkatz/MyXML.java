@@ -7,6 +7,9 @@ import java.nio.file.Path;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamReader;
 
@@ -23,6 +26,8 @@ public class MyXML {
         //    System.out.println(s);
         //}
 
+        // ---
+
         // https://www.baeldung.com/java-xerces-dom-parsing
         // https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html
         // https://www.oracle.com/java/technologies/jaxp-introduction.html
@@ -34,10 +39,13 @@ public class MyXML {
         }
 
         // SAX
+        SAXParserFactory factory2 = SAXParserFactory.newInstance();
+        SAXParser parser2 = factory2.newSAXParser();
 
         // StAX
         XMLInputFactory factory1 = XMLInputFactory.newInstance();
-        XMLStreamReader parser = factory1.createXMLStreamReader((Reader) null);
+        XMLStreamReader parser11 = factory1.createXMLStreamReader((Reader) null);
+        XMLEventReader parser12 = factory1.createXMLEventReader((Reader) null);
 
         // ---
 
