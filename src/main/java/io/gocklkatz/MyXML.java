@@ -12,6 +12,8 @@ import javax.xml.parsers.SAXParserFactory;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamReader;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
@@ -46,6 +48,10 @@ public class MyXML {
         XMLInputFactory factory1 = XMLInputFactory.newInstance();
         XMLStreamReader parser11 = factory1.createXMLStreamReader((Reader) null);
         XMLEventReader parser12 = factory1.createXMLEventReader((Reader) null);
+
+        // XPath
+        XPathFactory factory3 = XPathFactory.newInstance();
+        XPathExpression expression = factory3.newXPath().compile("/party");
 
         // ---
 
