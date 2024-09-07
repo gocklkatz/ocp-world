@@ -1,2 +1,2 @@
-- Oracle Certified Associate - Java SE 8 Programmer (OCAJP8, 1Z0-808)
+- OCA-JP8 (1Z0-808), OCP-JP8 (1Z0-809), OCP JD17 (1Z0-829)
 - You cannot have more than one public top-level reference type in a file!
