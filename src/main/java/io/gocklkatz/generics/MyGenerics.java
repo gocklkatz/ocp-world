@@ -8,5 +8,11 @@ public class MyGenerics {
         System.out.println("Hello lovely Generics!");
 
         Function<Lesson, Timeslot> getTimeslot = Lesson::getTimeslot;
+
+        Timeslot timeslot = new Timeslot();
+        Lesson lesson = new Lesson();
+        lesson.setTimeslot(timeslot);
+
+        Timeslot t2 = getTimeslot.apply(lesson);
     }
 }

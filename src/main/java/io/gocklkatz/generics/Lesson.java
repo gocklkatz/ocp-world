@@ -7,4 +7,8 @@ public class Lesson {
     public Timeslot getTimeslot() {
         return this.timeslot;
     }
+
+    public void setTimeslot(Timeslot timeslot) {
+        this.timeslot = timeslot;
+    }
 }
