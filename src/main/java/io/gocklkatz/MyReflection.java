@@ -1,8 +1,15 @@
 package io.gocklkatz;
 
+import java.lang.reflect.AccessibleObject;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Executable;
+import java.lang.reflect.Field;
+import java.lang.reflect.GenericDeclaration;
+import java.lang.reflect.Member;
+import java.lang.reflect.Method;
+
 import java.net.URLClassLoader;
 import java.security.SecureClassLoader;
-import java.util.Date;
 import java.util.HashMap;
 
 public class MyReflection {
@@ -36,5 +43,15 @@ public class MyReflection {
         //...
 
         System.out.println(String.class.getSuperclass());
+        System.out.println("--- --- ---");
+
+        Constructor constructor;
+        Method method;
+        Executable executable;
+        Field field;
+        Member member;
+        GenericDeclaration genericDeclaration;
+        AccessibleObject accessibleObject;
+
     }
 }
