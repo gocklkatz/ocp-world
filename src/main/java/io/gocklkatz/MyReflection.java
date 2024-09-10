@@ -1,6 +1,7 @@
 package io.gocklkatz;
 
 import java.lang.reflect.AccessibleObject;
+import java.lang.reflect.AnnotatedElement;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Executable;
 import java.lang.reflect.Field;
@@ -14,7 +15,15 @@ import java.util.HashMap;
 
 public class MyReflection {
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static Integer integer;
+    public Double aDouble;
+
+    public static void method1() {}
+    private static void method2() {}
+    public void method3() {}
+    private void method4() {}
+
+    public static void main(String[] args) throws Exception {
         System.out.println("Hello beautiful Reflection!");
 
         // java.lang.Class
@@ -52,6 +61,18 @@ public class MyReflection {
         Member member;
         GenericDeclaration genericDeclaration;
         AccessibleObject accessibleObject;
+        AnnotatedElement annotatedElement;
 
+        Field[] fields = MyReflection.class.getFields();
+        Field field1 = MyReflection.class.getField("integer");
+
+        Member member1 = MyReflection.class.getField("integer");
+        member1.getName();
+
+        Method[] methods = MyReflection.class.getMethods();
+        Method method1 = MyReflection.class.getMethod("method1");
+        Member member2 = MyReflection.class.getMethod("method1");
+
+        Constructor<?>[] constructors = MyReflection.class.getConstructors();
     }
 }
