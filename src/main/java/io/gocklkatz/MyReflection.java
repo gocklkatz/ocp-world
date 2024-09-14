@@ -74,5 +74,26 @@ public class MyReflection {
         Member member2 = MyReflection.class.getMethod("method1");
 
         Constructor<?>[] constructors = MyReflection.class.getConstructors();
+
+        // Create and manipulate objects
+        Class<MyReflection> clayy = MyReflection.class;
+
+        Constructor<MyReflection> constructor1 = clayy.getConstructor();
+        MyReflection myReflection = constructor1.newInstance();
+        myReflection.aDouble = 1.0;
+
+        Field field2 = clayy.getField("aDouble");
+        double d = (Double) field2.get(myReflection);
+        System.out.println("double: " + d);
+        field2.set(myReflection, 2.0);
+        System.out.println("double: " + myReflection.aDouble);
+
+        Field field3 = clayy.getField("integer");
+        field3.set(null, 3);
+        System.out.println("integer: " + MyReflection.integer);
+
+        System.out.println("--- --- ---");
+
+
     }
 }
