@@ -84,8 +84,12 @@ public class MyReflection {
 
         Field field2 = clayy.getField("aDouble");
         double d = (Double) field2.get(myReflection);
+        //IllegalArgumentException
+        //double dd = field2.getDouble(myReflection);
         System.out.println("double: " + d);
         field2.set(myReflection, 2.0);
+        //IllegalArgumentException
+        //field2.setDouble(myReflection, 4.0);
         System.out.println("double: " + myReflection.aDouble);
 
         Field field3 = clayy.getField("integer");
@@ -93,7 +97,5 @@ public class MyReflection {
         System.out.println("integer: " + MyReflection.integer);
 
         System.out.println("--- --- ---");
-
-
     }
 }
