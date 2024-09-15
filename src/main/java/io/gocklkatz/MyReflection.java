@@ -18,8 +18,12 @@ public class MyReflection {
     public static Integer integer;
     public Double aDouble;
 
-    public static void method1() {}
-    private static void method2() {}
+    public static void method1() {
+        System.out.println("method1()");
+    }
+    private static void method2() {
+        System.out.println("method2()");
+    }
     public void method3() {
         System.out.println("method3()");
     }
@@ -107,5 +111,7 @@ public class MyReflection {
         Class<MyReflection> myReflec = MyReflection.class;
         Method m3 = myReflec.getMethod("method3");
         m3.invoke(new MyReflection());
+        Method m1 = myReflec.getMethod("method1");
+        m1.invoke(null);
     }
 }
