@@ -103,5 +103,9 @@ public class MyReflection {
         System.out.println("--- --- ---");
 
         AccessibleObject accessibleObject2;
+
+        Class<MyReflection> myReflec = MyReflection.class;
+        Method m3 = myReflec.getMethod("method3");
+        m3.invoke(new MyReflection());
     }
 }
