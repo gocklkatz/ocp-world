@@ -1,5 +1,6 @@
 package io.gocklkatz.annotations;
 
+import java.nio.file.Path;
 import java.time.LocalDate;
 
 public class MyAnnotation {
@@ -7,10 +8,10 @@ public class MyAnnotation {
     @CurrentDateResource
     public LocalDate now;
 
-    /*
-    @ListOfFiles("/")
+    @ListOfFilesResource("/")
     Path[] files;
 
+    /*
     @UrlResource("http://tutego.de/javabuch/aufgaben/bond.txt")
     String testFile1;
 
