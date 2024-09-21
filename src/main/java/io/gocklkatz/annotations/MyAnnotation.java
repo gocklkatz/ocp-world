@@ -11,10 +11,14 @@ public class MyAnnotation {
     @ListOfFilesResource("/")
     Path[] files;
 
-    /*
     @UrlResource("http://tutego.de/javabuch/aufgaben/bond.txt")
     String testFile1;
 
+    @UrlResource(value = "http://tutego.de/javabuch/aufgaben/bond.txt",
+                 trim = true)
+    public String getTestFile2;
+
+    /*
     @UrlResource(value = "http://tutego.de/javabuch/aufgaben/bond.txt",
                  trim = true,
                  upperLowerCase = UpperLowerCase.UPPER)
